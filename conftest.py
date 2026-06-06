@@ -13,4 +13,5 @@ def driver(request):
 
     request.addfinalizer(driver_teardown)
     # Hand off the driver to the test
+    _driver.maximize_window()
     return _driver

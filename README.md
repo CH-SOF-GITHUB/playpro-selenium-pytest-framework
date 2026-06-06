@@ -87,10 +87,15 @@ How to  execute pytest tests in cmd command:
   + pytest tests/play/pro/v3/test_open_page.py
   + pytest tests/play/pro/v3/test_open_page.py -v --html=reports/report.html
   + pytest tests/play/pro/v3/**.py -v --html=reports/report.html
-  + @pytest.mark.smoke
+  + @pytest.mark.smoke      
     def test_login():
        pass
-    Run only the smoke tests :  pytest -m
+    Run only the smoke tests :  pytest -m || pytest -m smoke tests/play/pro/v3/test_open_page.py
+  + pytest with the live logging flag: pytest -o log_cli=true --log-cli-level=INFO
+  + pytest -x           # stop after first failure
+  + pytest --maxfail=2  # stop after two failures
+  + pytest -x --pdb   # drop to PDB on first failure, then end test session
+  + pytest --pdb --maxfail=3  # drop to PDB for first three failures
 """
 
 """
