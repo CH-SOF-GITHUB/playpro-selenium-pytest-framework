@@ -1,70 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuites name="pytest tests">
-    <testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="32.292"
-               timestamp="2026-06-07T20:23:02.865952+01:00" hostname="DESKTOP-17V9HJ5">
+    <testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="24.577"
+               timestamp="2026-06-07T20:29:52.762066+01:00" hostname="DESKTOP-17V9HJ5">
         <properties>
             <property name="Project" value="Play-Pro-V3"/>
             <property name="Environment" value="QA"/>
             <property name="Test Suite" value="Cart Suite Test"/>
         </properties>
-        <testcase classname="properties.test_cart_empty" name="test_go_to_cart" time="31.077">
+        <testcase classname="properties.test_cart_empty" name="test_go_to_cart" time="24.025">
             <properties>
                 <property name="Test" value="Cart Empty Navigation"/>
                 <property name="Priority" value="High"/>
                 <property name="Browser" value="Chrome"/>
                 <property name="Type" value="Functional"/>
                 <property name="URL" value="https://demotenant.playpro.fr/"/>
+                <property name="Status" value="success"/>
             </properties>
-            <failure
-                    message="AssertionError: assert ('https://demotenant.playpro.fr/' == 'https://demotenant.playpro.fr/Panier'&#10;  &#10;  #x1B[0m#x1B[91m- https://demotenant.playpro.fr/Panier#x1B[39;49;00m#x1B[90m#x1B[39;49;00m&#10;  ?                               ------#x1B[90m#x1B[39;49;00m&#10;  #x1B[92m+ https://demotenant.playpro.fr/#x1B[39;49;00m#x1B[90m#x1B[39;49;00m) is True">
-                driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="1c334e4eecd93e4c9f5db197080669c9")&gt;,
-                record_property = &lt;function record_property.&lt;locals&gt;.append_property at 0x0000021978E691C0&gt;
-                record_testsuite_property = &lt;bound method LogXML.add_global_property of &lt;_pytest.junitxml.LogXML
-                object at 0x0000021977FBCBC0&gt;&gt;
-
-                def test_go_to_cart(driver, record_property, record_testsuite_property):
-                # assign that status variable is global
-                global status
-                # save global properties for test suite
-                record_testsuite_property("Project","Play-Pro-V3")
-                record_testsuite_property("Environment", "QA")
-                record_testsuite_property("Test Suite", "Cart Suite Test")
-                # save private properties of test
-                record_property("Test", "Cart Empty Navigation")
-                record_property("Priority", "High")
-                record_property("Browser", "Chrome")
-                record_property("Type", "Functional")
-                # Go to home page
-                driver.get("https://demotenant.playpro.fr/")
-                # save a private property of test
-                record_property("URL", driver.current_url)
-                # wait initialization
-                wait = WebDriverWait(driver, 15)
-                # define Actions class
-                actions = ActionChains(driver)
-                # close the cookie
-                cookie_btn = wait.until(EC.element_to_be_clickable((By.XPATH,
-                "/html/body/div[3]/div/div/div[4]/div/button[1]")))
-                actions.move_to_element(cookie_btn)
-                actions.click(cookie_btn)
-                actions.perform()
-                # locate panier web element
-                panier_icon = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[@class='relative']")))
-                actions.move_to_element(panier_icon)
-                actions.click(panier_icon)
-                actions.perform()
-                # wait for 8s to allow to load page
-                sleep(8)
-                # assertion of url page
-                &gt; assert (driver.current_url == "https://demotenant.playpro.fr/Panier") is True
-                E AssertionError: assert ('https://demotenant.playpro.fr/' == 'https://demotenant.playpro.fr/Panier'
-                E
-                E #x1B[0m#x1B[91m- https://demotenant.playpro.fr/Panier#x1B[39;49;00m#x1B[90m#x1B[39;49;00m
-                E ? ------#x1B[90m#x1B[39;49;00m
-                E #x1B[92m+ https://demotenant.playpro.fr/#x1B[39;49;00m#x1B[90m#x1B[39;49;00m) is True
-
-                properties\test_cart_empty.py:49: AssertionError
-            </failure>
         </testcase>
     </testsuite>
 </testsuites>
