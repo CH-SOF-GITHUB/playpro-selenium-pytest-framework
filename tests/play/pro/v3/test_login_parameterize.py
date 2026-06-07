@@ -16,7 +16,7 @@ firefox_driver = webdriver.Firefox()
 def test_login_cross_browser(parallel_driver):
     # Open Play Pro V3 home page
     parallel_driver.get("https://demotenant.playpro.fr/connexion")
-    parallel_driver.maximize_window()
+    # parallel_driver.maximize_window()
     # wait initialization
     wait = WebDriverWait(parallel_driver, 15)
     email_field = wait.until(EC.visibility_of_element_located((By.NAME, "email")))
