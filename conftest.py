@@ -15,6 +15,7 @@ def driver(request):
     headless = os.environ.get("headless", "false")
     if headless == "true":
         chrome_options.add_argument("--headless=new")
+        chrome_options.add_argument("--window-size=1920x1080")
     # eliminate conflits permission linux
     chrome_options.add_argument("--no-sandbox")
     # prevents shared memory from becoming full
