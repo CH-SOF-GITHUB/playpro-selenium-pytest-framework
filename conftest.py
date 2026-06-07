@@ -15,7 +15,7 @@ def driver(request):
     headless = os.environ.get("headless", "false")
     if headless == "true":
         chrome_options.add_argument("--headless=new")
-        chrome_options.add_argument("--window-size=1296,688")
+        chrome_options.add_argument("--window-size=1920,1080")
     # eliminate conflits permission linux
     chrome_options.add_argument("--no-sandbox")
     # prevents shared memory from becoming full
@@ -24,7 +24,7 @@ def driver(request):
     _driver = webdriver.Chrome(options=chrome_options)
     # maximize the web driver
     _driver.maximize_window()
-    # Logger.set_message("Local - window size: " + str(_driver.get_window_size()))
+    #Logger.set_message("Local - window size: " + str(_driver.get_window_size()))
 
     # Close the driver if the test finished
     def driver_teardown():
