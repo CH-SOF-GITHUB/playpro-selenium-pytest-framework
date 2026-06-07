@@ -152,3 +152,27 @@ pip install pytest-xdist
 # Run all browser instances concurrently
 pytest test_suite.py -n 3 -v
 """
+"""
+Jenkins: http://localhost:8080/
+         http://localhost:8080/job/Run-Selenium-Tests/
+
+Build Steps : Add Build Step → Execute Windows batch command
+     "C:\Users\chaker\AppData\Local\Programs\Python\Python312\python.exe" --version
+
+     "C:\Users\chaker\AppData\Local\Programs\Python\Python312\python.exe" -m venv venv
+
+     call venv\Scripts\activate
+
+     python -m pip install -r requirements.txt
+
+     python -m pytest actions\test_panier_reservation.py -v 
+
+Build Steps : Add Build Step → Execute Windows batch command
+     python -m venv venv
+
+     call venv\Scripts\activate
+
+     pip install -r requirements.txt
+
+     pytest -v --html=reports/report.html
+"""

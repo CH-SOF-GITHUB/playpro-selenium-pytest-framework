@@ -1,6 +1,6 @@
 """
 TC01: Go to panier and direct to reservation page
-      Test Path: Panier > Reservation using Actions  class
+TC02: Test Path: Panier > Reservation using Actions  class
 """
 from time import sleep
 
@@ -8,11 +8,8 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-import logging
 import pytest
-
-# define logging instance to log tests
-logger = logging.getLogger(__name__)
+from utils.Logger import Logger
 
 
 @pytest.mark.dependency()
@@ -37,7 +34,8 @@ def test_panier_reservation(driver):
     sleep(8)
     # assertion of url page
     assert (driver.current_url == "https://demotenant.playpro.fr/Panier") is True
-    logger.info("Actions Test passed")
+    # LOG Result
+    Logger.set_message("Actions Test passed")
 
 
 @pytest.mark.dependency(depends=["test_panier_reservation"])
@@ -68,4 +66,4 @@ def test_discover_after_panier(driver):
     sleep(8)
     # assertion of url page
     assert (driver.current_url == "https://demotenant.playpro.fr/discover/reservation") is True
-    logger.info("pytest dependency passed")
+    Logger.set_message("pytest dependency passed")
