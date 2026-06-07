@@ -24,7 +24,7 @@ def driver(request):
     _driver = webdriver.Chrome(options=chrome_options)
     # maximize the web driver
     _driver.maximize_window()
-    Logger.set_message("Local - window size: " + str(driver.get_window_size()))
+    Logger.set_message("Local - window size: " + str(_driver.get_window_size()))
 
     # Close the driver if the test finished
     def driver_teardown():
