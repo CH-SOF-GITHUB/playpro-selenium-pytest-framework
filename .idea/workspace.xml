@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="515b342b-bf31-4595-ac8f-ea361fb781ca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/python-package.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/python-package.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/console.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_google.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_google.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,60 +40,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0005372942428545" />
-      <entry key="S2" value="1.1522515184439885" />
-      <entry key="S5" value="1.4784617882346018" />
-      <entry key="S10" value="1.8010562989090304" />
-      <entry key="S30" value="2.641467720952157" />
-      <entry key="S60" value="3.1731334971929708" />
-      <entry key="M2" value="3.816106618407537" />
-      <entry key="M5" value="9.447174530463997" />
-      <entry key="M10" value="22.586743655831846" />
-      <entry key="M15" value="33.4216629855325" />
-      <entry key="M30" value="58.57818941853305" />
-      <entry key="H1" value="107.12022379460547" />
-      <entry key="H2" value="212.95844964979094" />
-      <entry key="H4" value="383.8849668375828" />
-      <entry key="D1" value="743.9092394436368" />
-      <entry key="W1" value="846.2609585561037" />
+      <entry key="MS500" value="1.0000000000210119" />
+      <entry key="S2" value="1.0021445782714036" />
+      <entry key="S5" value="1.0921857090473859" />
+      <entry key="S10" value="1.3754574966194497" />
+      <entry key="S30" value="2.472711122650595" />
+      <entry key="S60" value="4.545851764816764" />
+      <entry key="M2" value="8.89591788745599" />
+      <entry key="M5" value="18.198446132639248" />
+      <entry key="M10" value="29.20389959287882" />
+      <entry key="M15" value="38.9949728563677" />
+      <entry key="M30" value="66.20446843704609" />
+      <entry key="H1" value="117.2231084311263" />
+      <entry key="H2" value="222.53744319229313" />
+      <entry key="H4" value="398.7720909043031" />
+      <entry key="D1" value="796.9636858415125" />
+      <entry key="W1" value="915.1630002287577" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="4.198521553467974E-99" />
-      <entry key="S5" value="4.459011113840468E-40" />
-      <entry key="S10" value="2.111637074548172E-20" />
-      <entry key="S30" value="2.7682015407170567E-7" />
-      <entry key="S60" value="5.566452355837945E-4" />
-      <entry key="M2" value="0.03444274984818475" />
-      <entry key="M5" value="0.7753541152316354" />
-      <entry key="M10" value="2.751390553828011" />
-      <entry key="M15" value="4.503417537453837" />
-      <entry key="M30" value="9.607281795302306" />
-      <entry key="H1" value="21.81634064821801" />
-      <entry key="H2" value="45.86124974397777" />
-      <entry key="H4" value="77.93184679468197" />
-      <entry key="D1" value="135.24671925112025" />
-      <entry key="W1" value="150.28684638931617" />
+      <entry key="MS100" value="1.013476696253726E-93" />
+      <entry key="MS500" value="2.610166145868571E-19" />
+      <entry key="S2" value="3.218378798317942E-5" />
+      <entry key="S5" value="0.023719594511119484" />
+      <entry key="S10" value="0.21706495932500866" />
+      <entry key="S30" value="0.9620321339046137" />
+      <entry key="S60" value="1.5168352208888813" />
+      <entry key="M2" value="2.2764026228968985" />
+      <entry key="M5" value="4.02302780022551" />
+      <entry key="M10" value="6.4035322478545424" />
+      <entry key="M15" value="8.447158951275135" />
+      <entry key="M30" value="13.818611528164055" />
+      <entry key="H1" value="25.089328628508" />
+      <entry key="H2" value="48.458383904393386" />
+      <entry key="H4" value="82.31518282105853" />
+      <entry key="D1" value="147.78493077859693" />
+      <entry key="W1" value="165.73379326734886" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.07536298923067254" />
-      <entry key="MS500" value="0.5967784890395313" />
-      <entry key="S2" value="1.0300388127308657" />
-      <entry key="S5" value="1.426053712294898" />
-      <entry key="S10" value="1.768635428094451" />
-      <entry key="S30" value="2.6201267844793894" />
-      <entry key="S60" value="3.159359599945237" />
-      <entry key="M2" value="3.841466090347708" />
-      <entry key="M5" value="10.21121248198045" />
-      <entry key="M10" value="25.322523145974294" />
-      <entry key="M15" value="37.90890023731304" />
-      <entry key="M30" value="68.16913098152966" />
-      <entry key="H1" value="128.91808921390856" />
-      <entry key="H2" value="258.7996297049996" />
-      <entry key="H4" value="461.79927900057766" />
-      <entry key="D1" value="879.1507567454602" />
-      <entry key="W1" value="996.5469756994852" />
+      <entry key="MS100" value="3.286165213398551E-50" />
+      <entry key="MS500" value="1.3258829310273893E-10" />
+      <entry key="S2" value="0.004926279979583642" />
+      <entry key="S5" value="0.20346807095118444" />
+      <entry key="S10" value="0.8723570333537405" />
+      <entry key="S30" value="3.0690250144709403" />
+      <entry key="S60" value="5.846328387768505" />
+      <entry key="M2" value="11.034440914340937" />
+      <entry key="M5" value="22.117375668298266" />
+      <entry key="M10" value="35.51857465645508" />
+      <entry key="M15" value="47.36491070803237" />
+      <entry key="M30" value="79.96704018741461" />
+      <entry key="H1" value="142.27198664123335" />
+      <entry key="H2" value="270.96436384368593" />
+      <entry key="H4" value="481.06348884251105" />
+      <entry key="D1" value="944.7420373903504" />
+      <entry key="W1" value="1080.8957507111859" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -138,7 +140,7 @@
       <recent name="C:\Users\chaker\Desktop\automation\Mobile-Web-Testing\python-automation\documentation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for actions.test_login.test_sample_login">
+  <component name="RunManager" selected="Python tests.Python tests for tests.test_google.test_google_search">
     <configuration name="Python tests for actions.test_cart_go_to_reservation.test_panier_reservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-automation" />
       <option name="ENV_FILES" value="" />
@@ -211,7 +213,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.play.pro.v3.test_sample_login.test_login_01" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_google.test_google_search" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-automation" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -225,17 +227,17 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.play.pro.v3.test_sample_login.test_login_01&quot;" />
+      <option name="_new_target" value="&quot;tests.test_google.test_google_search&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for tests.test_google.test_google_search" />
         <item itemvalue="Python tests.Python tests for actions.test_login.test_sample_login" />
         <item itemvalue="Python tests.Python tests for actions.test_cart_go_to_reservation.test_panier_reservation" />
         <item itemvalue="Python tests.Python tests for tests.play.pro.v3.test_open_page.test_open_home_page" />
         <item itemvalue="Python tests.Python tests for tests.play.pro.v3.test_login_parameterize.test_login_cross_browser" />
-        <item itemvalue="Python tests.Python tests for tests.play.pro.v3.test_sample_login.test_login_01" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +261,7 @@
       <workItem from="1780788576965" duration="5582000" />
       <workItem from="1780848377830" duration="1232000" />
       <workItem from="1780850132757" duration="11446000" />
-      <workItem from="1780863746146" duration="778000" />
+      <workItem from="1780863746146" duration="3218000" />
     </task>
     <servers />
   </component>
