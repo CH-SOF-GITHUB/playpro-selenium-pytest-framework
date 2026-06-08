@@ -33,4 +33,4 @@ jobs:
         env:
           headless: "true"  # <--- C'EST ICI QU'IL FAUT LE METTRE !
         run: |
-          pytest -v properties/test_cart_empty.py
+          pytest -v tests/play/pro/v3/test_go_to_reservation_page.py
