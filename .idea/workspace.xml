@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="515b342b-bf31-4595-ac8f-ea361fb781ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/play/pro/v3/test_go_to_reservation_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/pytest-logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pytest-logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/play/pro/v3/test_sample_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/play/pro/v3/test_sample_login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="33" />
+    <option name="cachedIndexableFilesCount" value="35" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,61 +42,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000031502169894" />
-      <entry key="S2" value="1.1149824442171103" />
-      <entry key="S5" value="1.6323564988236796" />
-      <entry key="S10" value="2.1228816438452425" />
-      <entry key="S30" value="2.6493675515330333" />
-      <entry key="S60" value="2.8177311193698182" />
-      <entry key="M2" value="2.97048443026884" />
-      <entry key="M5" value="3.807980412591314" />
-      <entry key="M10" value="6.122446218428105" />
-      <entry key="M15" value="10.056661661231784" />
-      <entry key="M30" value="28.587668705915082" />
-      <entry key="H1" value="74.68331062390925" />
-      <entry key="H2" value="176.31943720897297" />
-      <entry key="H4" value="355.2658261326246" />
-      <entry key="D1" value="789.4254009646328" />
-      <entry key="W1" value="923.9261515601798" />
+      <entry key="MS100" value="1.0054201820380257" />
+      <entry key="MS500" value="1.6268230855883707" />
+      <entry key="S2" value="3.8643990650939464" />
+      <entry key="S5" value="6.480528322614313" />
+      <entry key="S10" value="8.779160677940961" />
+      <entry key="S30" value="12.234262663962305" />
+      <entry key="S60" value="14.377432688441866" />
+      <entry key="M2" value="16.42003229210359" />
+      <entry key="M5" value="19.68811139858015" />
+      <entry key="M10" value="28.218256592719396" />
+      <entry key="M15" value="38.199048107449784" />
+      <entry key="M30" value="65.04425882538922" />
+      <entry key="H1" value="113.35324166777654" />
+      <entry key="H2" value="212.83997859447783" />
+      <entry key="H4" value="394.118555562004" />
+      <entry key="D1" value="870.5483979255475" />
+      <entry key="W1" value="1025.7504206826773" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.4070916954841704E-240" />
-      <entry key="S5" value="2.1092849827879324E-96" />
-      <entry key="S10" value="2.046497367440989E-48" />
-      <entry key="S30" value="2.013749736311557E-16" />
-      <entry key="S60" value="2.0066597786546577E-8" />
-      <entry key="M2" value="2.0037108731028446E-4" />
-      <entry key="M5" value="0.05355782982957833" />
-      <entry key="M10" value="0.5001338760661878" />
-      <entry key="M15" value="1.375590710017701" />
-      <entry key="M30" value="5.307681533432902" />
-      <entry key="H1" value="15.34472855860395" />
-      <entry key="H2" value="37.749673340934464" />
-      <entry key="H4" value="72.83506451956173" />
-      <entry key="D1" value="146.15590997529242" />
-      <entry key="W1" value="167.14669201058092" />
+      <entry key="MS100" value="9.375874760918707E-98" />
+      <entry key="MS500" value="3.93008876548931E-20" />
+      <entry key="S2" value="1.4079933054409753E-5" />
+      <entry key="S5" value="0.011466751782730353" />
+      <entry key="S10" value="0.10715099336499842" />
+      <entry key="S30" value="0.5175330888487895" />
+      <entry key="S60" value="0.9935575727251549" />
+      <entry key="M2" value="2.1600266671654054" />
+      <entry key="M5" value="5.907774181089718" />
+      <entry key="M10" value="11.435192176531638" />
+      <entry key="M15" value="15.905171525246542" />
+      <entry key="M30" value="25.217490524917384" />
+      <entry key="H1" value="38.25164223818554" />
+      <entry key="H2" value="61.676727921209896" />
+      <entry key="H4" value="98.83789149059571" />
+      <entry key="D1" value="182.30663593245944" />
+      <entry key="W1" value="207.3553150959199" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.03257705502628504" />
-      <entry key="MS500" value="0.5041868602814769" />
-      <entry key="S2" value="0.9308772718019286" />
-      <entry key="S5" value="1.5030553239248736" />
-      <entry key="S10" value="2.03185895627189" />
-      <entry key="S30" value="2.6094903302209063" />
-      <entry key="S60" value="2.7962686525118516" />
-      <entry key="M2" value="2.959429260272209" />
-      <entry key="M5" value="3.8557118095020666" />
-      <entry key="M10" value="6.615616768026932" />
-      <entry key="M15" value="11.421256477609974" />
-      <entry key="M30" value="33.875639737968925" />
-      <entry key="H1" value="90.00413077874717" />
-      <entry key="H2" value="214.04486615330387" />
-      <entry key="H4" value="428.07993481178426" />
-      <entry key="D1" value="935.5748147216169" />
-      <entry key="W1" value="1091.0717933167473" />
+      <entry key="MS100" value="0.9122855741737229" />
+      <entry key="MS500" value="1.5941146197945326" />
+      <entry key="S2" value="3.8453451448699387" />
+      <entry key="S5" value="6.469740033701504" />
+      <entry key="S10" value="8.844805663551494" />
+      <entry key="S30" value="12.695845710155158" />
+      <entry key="S60" value="15.31955468420366" />
+      <entry key="M2" value="18.537953732427884" />
+      <entry key="M5" value="25.56431843444954" />
+      <entry key="M10" value="39.623288816451435" />
+      <entry key="M15" value="54.07454297975097" />
+      <entry key="M30" value="90.23350622992402" />
+      <entry key="H1" value="151.57749372845552" />
+      <entry key="H2" value="274.49056575565453" />
+      <entry key="H4" value="492.9339321418719" />
+      <entry key="D1" value="1052.8478321555267" />
+      <entry key="W1" value="1233.1045601523128" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -108,9 +114,11 @@
     "Python tests.Python tests for actions.test_login.test_sample_login.executor": "Run",
     "Python tests.Python tests for actions.test_panier_reservation.test_panier_reservation.executor": "Run",
     "Python tests.Python tests for properties.test_cart_empty.test_go_to_cart.executor": "Run",
+    "Python tests.Python tests for tests.play.pro.v3.test_go_to_reservation_page.test_go_to_discover_reservation.executor": "Run",
     "Python tests.Python tests for tests.play.pro.v3.test_login_parameterize.test_login_cross_browser.executor": "Run",
     "Python tests.Python tests for tests.play.pro.v3.test_open_page.test_open_home_page.executor": "Run",
     "Python tests.Python tests for tests.play.pro.v3.test_sample_login.test_login_01.executor": "Run",
+    "Python tests.Python tests for tests.play.pro.v3.test_sample_login.test_login_02.executor": "Run",
     "Python tests.Python tests for tests.test_google.test_google_search.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -138,25 +146,7 @@
       <recent name="C:\Users\chaker\Desktop\automation\Mobile-Web-Testing\python-automation\documentation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for properties.test_cart_empty.test_go_to_cart">
-    <configuration name="Python tests for actions.test_cart_go_to_reservation.test_panier_reservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="python-automation" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;actions.test_cart_go_to_reservation.test_panier_reservation&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests for tests.play.pro.v3.test_go_to_reservation_page.test_go_to_discover_reservation">
     <configuration name="Python tests for actions.test_login.test_sample_login" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-automation" />
       <option name="ENV_FILES" value="" />
@@ -193,7 +183,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.play.pro.v3.test_open_page.test_open_home_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.play.pro.v3.test_go_to_reservation_page.test_go_to_discover_reservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-automation" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -207,7 +197,25 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.play.pro.v3.test_open_page.test_open_home_page&quot;" />
+      <option name="_new_target" value="&quot;tests.play.pro.v3.test_go_to_reservation_page.test_go_to_discover_reservation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.play.pro.v3.test_sample_login.test_login_02" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-automation" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.play.pro.v3.test_sample_login.test_login_02&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -231,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for tests.play.pro.v3.test_go_to_reservation_page.test_go_to_discover_reservation" />
+        <item itemvalue="Python tests.Python tests for tests.play.pro.v3.test_sample_login.test_login_02" />
         <item itemvalue="Python tests.Python tests for properties.test_cart_empty.test_go_to_cart" />
         <item itemvalue="Python tests.Python tests for tests.test_google.test_google_search" />
         <item itemvalue="Python tests.Python tests for actions.test_login.test_sample_login" />
-        <item itemvalue="Python tests.Python tests for actions.test_cart_go_to_reservation.test_panier_reservation" />
-        <item itemvalue="Python tests.Python tests for tests.play.pro.v3.test_open_page.test_open_home_page" />
       </list>
     </recent_temporary>
   </component>
@@ -260,6 +268,7 @@
       <workItem from="1780848377830" duration="1232000" />
       <workItem from="1780850132757" duration="11446000" />
       <workItem from="1780863746146" duration="6919000" />
+      <workItem from="1780956201062" duration="3889000" />
     </task>
     <servers />
   </component>
@@ -278,6 +287,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/python_automation$.coverage" NAME=" Coverage Results" MODIFIED="1780869836539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_automation$.coverage" NAME=" Coverage Results" MODIFIED="1780960190013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

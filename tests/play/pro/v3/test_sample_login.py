@@ -2,30 +2,25 @@
 sample test sample login using Fixtures Test Functions
 """
 from time import sleep
-import logging
 import pytest
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 from utils.waits import Wait
 
 
 def test_login_01(driver):
     # Open Play Pro V3 home page
     driver.get("https://demotenant.playpro.fr/connexion")
-    driver.maximize_window()
-    # wait initialization
-    wait = WebDriverWait(driver, 15)
     # close the cookie
-    cookie_btn = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[3]/div/div/div[4]/div/button[1]")))
+    cookie_btn = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[3]/div/div/div[4]/div/button[1]")))
     cookie_btn.click()
     # locate email and password fields
-    email_field = wait.until(EC.visibility_of_element_located((By.NAME, "email")))
+    email_field = Wait.wait(driver).until(EC.visibility_of_element_located((By.NAME, "email")))
     email_field.send_keys("demotenant3@yopmail.com")
-    pwd_field = wait.until(EC.visibility_of_element_located((By.NAME, "password")))
+    pwd_field = Wait.wait(driver).until(EC.visibility_of_element_located((By.NAME, "password")))
     pwd_field.send_keys("Admin1234!")
     # locate login button and click on
-    login_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']")))
+    login_button = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']")))
     login_button.click()
     # wait 7s to allow to load page
     sleep(7)
