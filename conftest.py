@@ -19,14 +19,16 @@ def driver(request):
     chrome_options.add_argument("--no-sandbox")
     # prevents shared memory from becoming full
     chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--start-maximized")
     # set up web driver with chrome options
     _driver = webdriver.Chrome(options=chrome_options)
+    """
     if headless == "true":
         _driver.set_window_size(1920, 1080)
     else:
         # maximize the web driver
         _driver.maximize_window()
-
+    """
     Logger.set_message("window size: " + str(_driver.get_window_size()))
 
     # Close the driver if the test finished
