@@ -1,6 +1,5 @@
-2026-06-09 00:10:37 INFO Python Web Driver Started
-2026-06-09 00:10:40 INFO window size: {'width': 1296, 'height': 688}
-2026-06-09 00:10:40 INFO Python Web Driver & Pytest Session Start
-2026-06-09 00:10:46 INFO Login Successful
-2026-06-09 00:11:07 INFO test_go_to_discover_reservation OK
-2026-06-09 00:11:07 INFO Python Web Driver Teardown
+2026-06-09 00:54:13 INFO Python Web Driver Started
+2026-06-09 00:54:16 INFO window size: {'width': 1296, 'height': 688}
+2026-06-09 00:54:16 INFO Python Web Driver & Pytest Session Start
+2026-06-09 00:54:29 INFO Login Successful
+2026-06-09 00:54:41 INFO Python Web Driver Teardown
