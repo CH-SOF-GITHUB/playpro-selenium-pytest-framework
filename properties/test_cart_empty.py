@@ -28,8 +28,8 @@ def test_go_to_cart(driver, request, record_property, record_testsuite_property)
     actions.move_to_element(panier_icon)
     actions.click(panier_icon)
     actions.perform()
-    # wait for 10s to allow to load page
-    sleep(10)
+    # wait for 25s to allow to load page
+    sleep(25)
     # assertion of url page
     assert (driver.current_url == "https://demotenant.playpro.fr/Panier") is True
     Logger.set_message(request.node.name + " OK")
