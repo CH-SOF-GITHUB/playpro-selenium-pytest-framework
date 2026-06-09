@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="515b342b-bf31-4595-ac8f-ea361fb781ca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/properties/test_discover_reservation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/test_reservation_activite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python-automation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python-automation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/test_reservation_steps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/pytest-logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pytest-logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/test_cart_empty.py" beforeDir="false" afterPath="$PROJECT_DIR$/properties/test_cart_empty.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/waits.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/waits.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/test_reservation_activite.py" beforeDir="false" afterPath="$PROJECT_DIR$/properties/test_reservation_activite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/results.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,61 +41,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.5195320781742095E-33" />
-      <entry key="MS500" value="2.7311274957174217E-7" />
-      <entry key="S2" value="0.022860488441793933" />
-      <entry key="S5" value="0.2208218146653149" />
-      <entry key="S10" value="0.48409213844476967" />
-      <entry key="S30" value="1.0207859096759133" />
-      <entry key="S60" value="1.4023888770921045" />
-      <entry key="M2" value="1.9880096167778363" />
-      <entry key="M5" value="4.340212887146994" />
-      <entry key="M10" value="12.410918244326375" />
-      <entry key="M15" value="23.80689659787793" />
-      <entry key="M30" value="56.83996773098971" />
-      <entry key="H1" value="110.71131309559556" />
-      <entry key="H2" value="209.8157052912431" />
-      <entry key="H4" value="395.30436654459726" />
-      <entry key="D1" value="964.2170253067516" />
-      <entry key="W1" value="1170.2308349484986" />
+      <entry key="MS100" value="1.0000000000073266" />
+      <entry key="MS500" value="1.0059734147317407" />
+      <entry key="S2" value="1.3591330491744311" />
+      <entry key="S5" value="1.9659109057211175" />
+      <entry key="S10" value="2.3797144581906204" />
+      <entry key="S30" value="2.7642645747941614" />
+      <entry key="S60" value="2.8830297197080856" />
+      <entry key="M2" value="3.396463275773984" />
+      <entry key="M5" value="12.253457896228566" />
+      <entry key="M10" value="31.532318021768216" />
+      <entry key="M15" value="47.71241021137685" />
+      <entry key="M30" value="87.08567107421672" />
+      <entry key="H1" value="148.36807870055532" />
+      <entry key="H2" value="253.3076114726935" />
+      <entry key="H4" value="443.2052015762966" />
+      <entry key="D1" value="1037.4461277080923" />
+      <entry key="W1" value="1257.3246009448824" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000076399784523" />
-      <entry key="S2" value="1.0525742436406649" />
-      <entry key="S5" value="1.3078287745078496" />
-      <entry key="S10" value="1.5548231959562857" />
-      <entry key="S30" value="1.82331100368316" />
-      <entry key="S60" value="1.9520228488895306" />
-      <entry key="M2" value="2.2332158121857186" />
-      <entry key="M5" value="3.199636883623219" />
-      <entry key="M10" value="5.700314638983516" />
-      <entry key="M15" value="8.78528072262063" />
-      <entry key="M30" value="17.682751279784075" />
-      <entry key="H1" value="33.40313792182238" />
-      <entry key="H2" value="60.836321096291506" />
-      <entry key="H4" value="104.3613702411901" />
-      <entry key="D1" value="214.13471208872545" />
-      <entry key="W1" value="250.17704756342414" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="2.9970435227629045E-100" />
+      <entry key="S5" value="2.626545280678702E-40" />
+      <entry key="S10" value="2.7683042681049705E-20" />
+      <entry key="S30" value="7.197555496445414E-7" />
+      <entry key="S60" value="0.001988792914527188" />
+      <entry key="M2" value="0.13103188593586118" />
+      <entry key="M5" value="2.0111013307173438" />
+      <entry key="M10" value="5.696543051679467" />
+      <entry key="M15" value="8.949901278586577" />
+      <entry key="M30" value="17.918357024967065" />
+      <entry key="H1" value="34.16379240259947" />
+      <entry key="H2" value="62.608521565578606" />
+      <entry key="H4" value="107.78548902615812" />
+      <entry key="D1" value="224.47217209691178" />
+      <entry key="W1" value="263.56377983852246" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0034961916833123902" />
-      <entry key="MS500" value="0.32264123402727146" />
-      <entry key="S2" value="0.7975765555801089" />
-      <entry key="S5" value="1.324605673563967" />
-      <entry key="S10" value="1.8863913139762687" />
-      <entry key="S30" value="2.769242649360411" />
-      <entry key="S60" value="3.3099791830972354" />
-      <entry key="M2" value="4.192922780655307" />
-      <entry key="M5" value="7.517292840038529" />
-      <entry key="M10" value="18.085495024171447" />
-      <entry key="M15" value="32.56468606979405" />
-      <entry key="M30" value="74.49594002180784" />
-      <entry key="H1" value="144.08999407341048" />
-      <entry key="H2" value="270.6284928176504" />
-      <entry key="H4" value="499.64400173515077" />
-      <entry key="D1" value="1178.3437514760633" />
-      <entry key="W1" value="1420.406534903842" />
+      <entry key="MS100" value="0.30778610333623435" />
+      <entry key="MS500" value="0.7914709024915789" />
+      <entry key="S2" value="1.2129756610345908" />
+      <entry key="S5" value="1.8533323603640093" />
+      <entry key="S10" value="2.306840965982352" />
+      <entry key="S30" value="2.7351278742767033" />
+      <entry key="S60" value="2.8697022993508283" />
+      <entry key="M2" value="3.5176515384589084" />
+      <entry key="M5" value="14.246919920680268" />
+      <entry key="M10" value="37.20515844583188" />
+      <entry key="M15" value="56.63702894856297" />
+      <entry key="M30" value="104.97817781460842" />
+      <entry key="H1" value="182.50726661164106" />
+      <entry key="H2" value="315.8923860025471" />
+      <entry key="H4" value="550.9686829629737" />
+      <entry key="D1" value="1261.9100395596695" />
+      <entry key="W1" value="1520.8869778524545" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -118,6 +116,7 @@
     "Python tests.Python tests for properties.test_cart_empty.test_go_to_empty_cart.executor": "Run",
     "Python tests.Python tests for properties.test_discover_reservation.test_reservation.executor": "Run",
     "Python tests.Python tests for properties.test_reservation_activite.test_discover_activity.executor": "Run",
+    "Python tests.Python tests for properties.test_reservation_steps.test_reservation_steps.executor": "Run",
     "Python tests.Python tests for test-discover_reservation.test_reservation.executor": "Run",
     "Python tests.Python tests for tests.play.pro.v3.test_go_to_reservation_page.test_go_to_discover_reservation.executor": "Run",
     "Python tests.Python tests for tests.play.pro.v3.test_login_parameterize.test_login_cross_browser.executor": "Run",
@@ -152,25 +151,7 @@
       <recent name="C:\Users\chaker\Desktop\automation\Mobile-Web-Testing\python-automation\documentation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for properties.test_reservation_activite.test_discover_activity">
-    <configuration name="Python tests for properties.test_cart_empty.test_go_to_cart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="python-automation" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;properties.test_cart_empty.test_go_to_cart&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests for properties.test_reservation_steps.test_reservation_steps">
     <configuration name="Python tests for properties.test_cart_empty.test_go_to_empty_cart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-automation" />
       <option name="ENV_FILES" value="" />
@@ -225,6 +206,24 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for properties.test_reservation_steps.test_reservation_steps" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-automation" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;properties.test_reservation_steps.test_reservation_steps&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests in test_discover_reservation.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-automation" />
       <option name="ENV_FILES" value="" />
@@ -245,11 +244,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for properties.test_reservation_steps.test_reservation_steps" />
         <item itemvalue="Python tests.Python tests for properties.test_reservation_activite.test_discover_activity" />
         <item itemvalue="Python tests.Python tests for properties.test_discover_reservation.test_reservation" />
         <item itemvalue="Python tests.Python tests for properties.test_cart_empty.test_go_to_empty_cart" />
         <item itemvalue="Python tests.Python tests in test_discover_reservation.py" />
-        <item itemvalue="Python tests.Python tests for properties.test_cart_empty.test_go_to_cart" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +274,7 @@
       <workItem from="1780850132757" duration="11446000" />
       <workItem from="1780863746146" duration="6919000" />
       <workItem from="1780956201062" duration="8450000" />
-      <workItem from="1781040993554" duration="4208000" />
+      <workItem from="1781040993554" duration="6343000" />
     </task>
     <servers />
   </component>
@@ -294,6 +293,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/python_automation$.coverage" NAME=" Coverage Results" MODIFIED="1781045583651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_automation$.coverage" NAME=" Coverage Results" MODIFIED="1781047673362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
