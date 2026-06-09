@@ -63,7 +63,7 @@ pytest -v
 Generate HTML report:
 
 ```bash
-pytest -v --html=reports/report.html
+pytest -v --html=test-reports/report.html
 ```
 
 ## Features
