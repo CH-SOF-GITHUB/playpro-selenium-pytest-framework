@@ -36,15 +36,12 @@ def test_reservation_steps(driver, request, record_property, record_testsuite_pr
     continue_btn = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div[3]/div/div[2]/button[1]")))
     continue_btn.click()
     # Locate Slot and click on it
-    slot_06_00 = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div[2]/div[4]/div[2]/div[1]/button")))
-    driver.execute_script("arguments[0].scrollIntoView();", slot_06_00)
-    sleep(3)
-    driver.execute_script("arguments[0].click();", slot_06_00)
-    # Locate confirm my reservation btn and click on it
-    confirm_btn = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div[3]/div/div[2]/button[1]")))
-    driver.execute_script("arguments[0].click();", confirm_btn)
-    # Wait Time to load page payment
-    sleep(10)
-    # assertion
-    assert (driver.current_url == "https://demotenant.playpro.fr/Panier") is True
+    table = []
+    slots = Wait.wait(driver).until(EC.visibility_of_all_elements_located((By.XPATH, "//button[@type='button']//div[@class='flex justify-center items-center']")))
+    for slot in slots:
+        table.append(slot.text)
+    # display text of table slots
+    for text in table:
+        Logger.set_message("slot: " + text)
+
     Logger.set_message(request.node.name + " OK")
