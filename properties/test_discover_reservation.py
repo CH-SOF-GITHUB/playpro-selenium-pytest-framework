@@ -1,5 +1,5 @@
 """
-TC01: Go to panier using properties Pytest
+TC01: Go to reservation page using properties Pytest
                and using {record_property, record_testsuite_property} fixtures
 """
 from time import sleep
@@ -9,7 +9,7 @@ from utils.waits import Wait
 from utils.Logger import Logger
 
 
-def test_go_to_empty_cart(driver, request, record_property, record_testsuite_property):
+def test_reservation(driver, request, record_property, record_testsuite_property):
     # save global properties for test suite
     record_testsuite_property("Project", "Play-Pro-V3")
     record_testsuite_property("Environment", "QA")
@@ -20,12 +20,11 @@ def test_go_to_empty_cart(driver, request, record_property, record_testsuite_pro
     record_property("Browser", "Chrome")
     record_property("Type", "Functional")
     record_property("URL", driver.current_url)
-    # locate panier web element
-    panier_icon = Wait.wait(driver).until(
-        EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/header/div/div[2]/a[2]")))
-    panier_icon.click()
-    # wait for 50s to allow to load page
-    sleep(25)
-    # assertion of url page
-    assert (driver.current_url == "https://demotenant.playpro.fr/Panier") is True
+    reserver_link = Wait.wait(driver).until(
+        EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/main/section[1]/div[3]/div[2]/a")))
+    reserver_link.click()
+    # wait for 10s to allow to load page
+    sleep(10)
+    # assertion
+    assert (driver.current_url == "https://demotenant.playpro.fr/discover/reservation") is True
     Logger.set_message(request.node.name + " OK")
