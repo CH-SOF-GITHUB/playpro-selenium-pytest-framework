@@ -36,10 +36,10 @@ def test_reservation_steps(driver, request, record_property, record_testsuite_pr
     continue_btn = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div[3]/div/div[2]/button[1]")))
     continue_btn.click()
     # Locate Slot and click on it
-    slot_07_30 = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div[2]/div[4]/div[2]/div[2]/button")))
-    driver.execute_script("arguments[0].scrollIntoView();", slot_07_30)
+    slot_06_00 = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div[2]/div[4]/div[2]/div[1]/button")))
+    driver.execute_script("arguments[0].scrollIntoView();", slot_06_00)
     sleep(3)
-    driver.execute_script("arguments[0].click();", slot_07_30)
+    driver.execute_script("arguments[0].click();", slot_06_00)
     # Locate confirm my reservation btn and click on it
     confirm_btn = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div[3]/div/div[2]/button[1]")))
     driver.execute_script("arguments[0].click();", confirm_btn)
