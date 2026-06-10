@@ -22,10 +22,12 @@ def test_reservation_steps(driver, request, record_property, record_testsuite_pr
     record_property("Type", "Functional")
     record_property("URL", driver.current_url)
     # Locate Book Link in home page and click on it
-    book_link = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/main/section[1]/div[3]/div[2]/a")))
+    book_link = Wait.wait(driver).until(
+        EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/main/section[1]/div[3]/div[2]/a")))
     book_link.click()
     # Locate Activity Card and click on it
-    activity_book_btn = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/section[1]/section[1]/div[2]/div[1]/div/div[2]/div/div[2]/div")))
+    activity_book_btn = Wait.wait(driver).until(EC.element_to_be_clickable(
+        (By.XPATH, "/html/body/div[1]/div/section[1]/section[1]/div[2]/div[1]/div/div[2]/div/div[2]/div")))
     driver.execute_script("arguments[0].scrollIntoView();", activity_book_btn)
     sleep(3)
     driver.execute_script("arguments[0].click();", activity_book_btn)
@@ -33,11 +35,14 @@ def test_reservation_steps(driver, request, record_property, record_testsuite_pr
     # wait for time to load page
     sleep(10)
     # Locate Continue btn and click on it
-    continue_btn = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div[3]/div/div[2]/button[1]")))
+    continue_btn = Wait.wait(driver).until(
+        EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div[3]/div/div[2]/button[1]")))
     continue_btn.click()
     # Locate Slot and click on it
     table = []
-    slots = Wait.wait(driver).until(EC.visibility_of_all_elements_located((By.XPATH, "//button[@type='button']//div[@class='flex justify-center items-center']")))
+    slots = Wait.wait(driver).until(lambda d: len(
+        d.find_elements(By.XPATH, "//button[@type='button']//div[@class='flex justify-center items-center']")) > 0)
+    # Wait.wait(driver).until(EC.visibility_of_all_elements_located((By.XPATH, "//button[@type='button']//div[@class='flex justify-center items-center']"))))
     for slot in slots:
         table.append(slot.text)
     # display text of table slots
