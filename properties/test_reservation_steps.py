@@ -40,9 +40,9 @@ def test_reservation_steps(driver, request, record_property, record_testsuite_pr
     continue_btn.click()
     # Locate Slot and click on it
     table = []
-    slots = Wait.wait(driver).until(lambda d: len(
+    Wait.wait(driver).until(lambda d: len(
         d.find_elements(By.XPATH, "//button[@type='button']//div[@class='flex justify-center items-center']")) > 0)
-    # Wait.wait(driver).until(EC.visibility_of_all_elements_located((By.XPATH, "//button[@type='button']//div[@class='flex justify-center items-center']"))))
+    slots = driver.find_elements(By.XPATH, "//button[@type='button']//div[@class='flex justify-center items-center']")
     for slot in slots:
         table.append(slot.text)
     # display text of table slots
