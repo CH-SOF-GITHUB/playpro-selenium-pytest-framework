@@ -1,4 +1,4 @@
-from conftest import driver
+# from conftest import driver
 from locators.login_locators import Locator
 from utils.waits import Wait
 from selenium.webdriver.support import expected_conditions as EC
