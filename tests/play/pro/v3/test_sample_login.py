@@ -6,9 +6,9 @@ import pytest
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from utils.waits import Wait
+from selenium.webdriver.remote.webdriver import WebDriver
 
-
-def test_login_01(driver):
+def test_login_01(driver:WebDriver):
     # Open Play Pro V3 home page
     driver.get("https://demotenant.playpro.fr/connexion")
     # close the cookie

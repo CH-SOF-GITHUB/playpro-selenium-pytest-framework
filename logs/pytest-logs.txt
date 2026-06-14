@@ -1,33 +1,7 @@
-2026-06-11 00:02:16 INFO Python Web Driver Started
-2026-06-11 00:02:26 INFO window size: {'width': 1296, 'height': 688}
-2026-06-11 00:02:26 INFO Python Web Driver & Pytest Session Start
-2026-06-11 00:02:41 INFO Login Successful
-2026-06-11 00:02:54 INFO Activity is clicked
-2026-06-11 00:03:15 INFO slot: 12:00
-48€
-2026-06-11 00:03:15 INFO slot: 13:30
-48€
-2026-06-11 00:03:15 INFO slot: 18:00
-48€
-2026-06-11 00:03:15 INFO slot: 19:30
-48€
-2026-06-11 00:03:15 INFO slot: 21:00
-40€
-2026-06-11 00:03:15 INFO slot: 22:30
-40€
-2026-06-11 00:03:15 INFO slot: 13:30
-48€
-2026-06-11 00:03:15 INFO slot: 15:00
-40€
-2026-06-11 00:03:15 INFO slot: 16:30
-40€
-2026-06-11 00:03:15 INFO slot: 18:00
-48€
-2026-06-11 00:03:15 INFO slot: 19:30
-48€
-2026-06-11 00:03:15 INFO slot: 21:00
-40€
-2026-06-11 00:03:15 INFO slot: 22:30
-40€
-2026-06-11 00:03:33 INFO test_reservation_steps OK
-2026-06-11 00:03:33 INFO Python Web Driver Teardown
+2026-06-14 13:22:34 INFO Python Web Driver Started
+2026-06-14 13:22:37 INFO window size: {'width': 1296, 'height': 688}
+2026-06-14 13:22:37 INFO Pytest Session Start
+2026-06-14 13:23:04 INFO Login Successful
+2026-06-14 13:23:12 INFO Activity is clicked
+2026-06-14 13:23:32 INFO test_discover_activity OK
+2026-06-14 13:23:32 INFO Python Web Driver Teardown
