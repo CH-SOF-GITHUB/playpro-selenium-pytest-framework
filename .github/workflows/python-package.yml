@@ -33,4 +33,4 @@ jobs:
         env:
           headless: "true"  # <--- C'EST ICI QU'IL FAUT LE METTRE !
         run: |
-          pytest -v tests/play/pro/v3/Reservation/test_reservation_03.py
+          pytest -v tests/play/pro/v3/Reservation/test_reservation_04.py

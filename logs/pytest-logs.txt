@@ -1,4 +1,5 @@
-2026-06-14 21:31:23 INFO Python Web Driver Started
-2026-06-14 21:31:24 INFO window size: {'width': 1296, 'height': 688}
-2026-06-14 21:31:24 INFO Pytest Session Start
-2026-06-14 21:32:12 INFO Python Web Driver Teardown
+2026-06-14 22:41:31 INFO Python Web Driver Started
+2026-06-14 22:41:33 INFO window size: {'width': 1296, 'height': 688}
+2026-06-14 22:41:33 INFO Pytest Session Start
+2026-06-14 22:41:50 INFO Login Successful
+2026-06-14 22:42:38 INFO Python Web Driver Teardown

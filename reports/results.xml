@@ -1,1 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="0" time="49.654" timestamp="2026-06-14T21:31:23.163846+01:00" hostname="DESKTOP-17V9HJ5" /></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="69.258" timestamp="2026-06-14T22:41:31.398585+01:00" hostname="DESKTOP-17V9HJ5"><testcase classname="tests.play.pro.v3.Reservation.test_reservation_04" name="test_open_activity_reservation" file="tests\play\pro\v3\Reservation\test_reservation_04.py" line="12" time="69.002"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebb07de5+14895]&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebb07e50+14900]&#10;&#09;chromedriver!(No symbol) [0x7ff7eb86d5ad]&#10;&#09;chromedriver!(No symbol) [0x7ff7eb8c7822]&#10;&#09;chromedriver!(No symbol) [0x7ff7eb8c7b2c]&#10;&#09;chromedriver!(No symbol) [0x7ff7eb917d17]&#10;&#09;chromedriver!(No symbol) [0x7ff7eb91486f]&#10;&#09;chromedriver!(No symbol) [0x7ff7eb8b9df8]&#10;&#09;chromedriver!(No symbol) [0x7ff7eb8bace3]&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebe1cc49+3296f9]&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebe17375+323e25]&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebe3bc82+348732]&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebb26045+32af5]&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebb2ecec+3b79c]&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebb11bc4+1e674]&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebb11d54+1e804]&#10;&#09;chromedriver!GetHandleVerifier [0x7ff7ebaf60e7+2b97]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x7ffc8f54e957+17]&#10;&#09;ntdll!RtlUserThreadStart [0x7ffc8fde7c1c+2c]">login = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="c2c60c5ca427c2b9b4594426041f09c9")&gt;
+request = &lt;FixtureRequest for &lt;Function test_open_activity_reservation&gt;&gt;
+
+    def test_open_activity_reservation(login: WebDriver, request):
+        # make an instance of login page class(s) and call method(s)
+&gt;       reservation_page = Reservation(driver=login)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\play\pro\v3\Reservation\test_reservation_04.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+pages\reservation_page.py:12: in __init__
+    self.activity_book_btn = Wait.wait(driver).until((EC.element_to_be_clickable(Locator.activity_book_btn)))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="c2c60c5ca427c2b9b4594426041f09c9")&gt;
+method = &lt;function element_to_be_clickable.&lt;locals&gt;._predicate at 0x000001C4C7EC6700&gt;
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            &gt;&gt;&gt; from selenium.webdriver.common.by import By
+            &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+            &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+            &gt;&gt;&gt;
+            &gt;&gt;&gt; # Wait until an element is visible on the page
+            &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+            &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: 
+E       Stacktrace:
+E       	chromedriver!GetHandleVerifier [0x7ff7ebb07de5+14895]
+E       	chromedriver!GetHandleVerifier [0x7ff7ebb07e50+14900]
+E       	chromedriver!(No symbol) [0x7ff7eb86d5ad]
+E       	chromedriver!(No symbol) [0x7ff7eb8c7822]
+E       	chromedriver!(No symbol) [0x7ff7eb8c7b2c]
+E       	chromedriver!(No symbol) [0x7ff7eb917d17]
+E       	chromedriver!(No symbol) [0x7ff7eb91486f]
+E       	chromedriver!(No symbol) [0x7ff7eb8b9df8]
+E       	chromedriver!(No symbol) [0x7ff7eb8bace3]
+E       	chromedriver!GetHandleVerifier [0x7ff7ebe1cc49+3296f9]
+E       	chromedriver!GetHandleVerifier [0x7ff7ebe17375+323e25]
+E       	chromedriver!GetHandleVerifier [0x7ff7ebe3bc82+348732]
+E       	chromedriver!GetHandleVerifier [0x7ff7ebb26045+32af5]
+E       	chromedriver!GetHandleVerifier [0x7ff7ebb2ecec+3b79c]
+E       	chromedriver!GetHandleVerifier [0x7ff7ebb11bc4+1e674]
+E       	chromedriver!GetHandleVerifier [0x7ff7ebb11d54+1e804]
+E       	chromedriver!GetHandleVerifier [0x7ff7ebaf60e7+2b97]
+E       	KERNEL32!BaseThreadInitThunk [0x7ffc8f54e957+17]
+E       	ntdll!RtlUserThreadStart [0x7ffc8fde7c1c+2c]
+
+.venv\Lib\site-packages\selenium\webdriver\support\wait.py:121: TimeoutException</failure></testcase></testsuite></testsuites>
