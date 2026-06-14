@@ -14,4 +14,4 @@ class Reservation(object):
         self.book_link.click()
 
     def click_booking_nav_link(self):
-        self.book_nav_link.click()
+        self.driver.execute_script("arguments[0].click();", self.book_nav_link)

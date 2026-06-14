@@ -16,7 +16,7 @@ def test_reservation(login: WebDriver, request):
     # Click on Book Link and redirect to reservation page
     reservation_page.click_booking_nav_link()
     # Wait for some time to allow to load page
-    sleep(8)
+    sleep(7)
     # assertion
     is_booking = False
     if login.current_url == "https://demotenant.playpro.fr/discover/reservation":
