@@ -34,3 +34,10 @@ jobs:
           headless: "true"  # <--- C'EST ICI QU'IL FAUT LE METTRE !
         run: |
           pytest -v tests/play/pro/v3/Reservation/test_reservation_05.py
+      - name: Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()       # always generate report even the test failed
+        with:
+          name: pytest-html-report
+          path: test-reports/report.html
+          retention-days: 7   # duration of reservation of report
