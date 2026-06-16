@@ -1,6 +1,6 @@
 """
 sample test login parametrized using Fixtures Test Functions
-"""
+
 
 import pytest
 from selenium.webdriver.support import expected_conditions as EC
@@ -23,3 +23,4 @@ def test_login_cross_browser(parallel_driver):
     assert email_field.is_displayed() is True
     # close the web driver and finish the test
     parallel_driver.quit()
+"""

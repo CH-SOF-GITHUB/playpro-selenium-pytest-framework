@@ -8,11 +8,13 @@ from selenium.webdriver.common.by import By
 from utils.waits import Wait
 from selenium.webdriver.remote.webdriver import WebDriver
 
-def test_login_01(driver:WebDriver):
+
+def test_login_01(driver: WebDriver):
     # Open Play Pro V3 home page
     driver.get("https://demotenant.playpro.fr/connexion")
     # close the cookie
-    cookie_btn = Wait.wait(driver).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[3]/div/div/div[4]/div/button[1]")))
+    cookie_btn = Wait.wait(driver).until(
+        EC.element_to_be_clickable((By.XPATH, "/html/body/div[3]/div/div/div[4]/div/button[1]")))
     cookie_btn.click()
     # locate email and password fields
     email_field = Wait.wait(driver).until(EC.visibility_of_element_located((By.NAME, "email")))
@@ -31,8 +33,7 @@ def test_login_01(driver:WebDriver):
     assert expected_url == actual_url, "Title did not match"
 
 
-@pytest.mark.smoke
-def test_login_02(driver):
+def test_login_02(driver: WebDriver):
     # Open Play Pro V3 home page
     driver.get("https://demotenant.playpro.fr/connexion")
     # close the cookie

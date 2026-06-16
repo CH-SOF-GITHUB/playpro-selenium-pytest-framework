@@ -6,17 +6,28 @@ Framework: Selenium + Pytest
 """
 
 from time import sleep
+
+import pytest
+
 from utils.Logger import Logger
 from selenium.webdriver.chrome.webdriver import WebDriver
 from pages.reservation_page import Reservation
 
+
+@pytest.mark.smoke
 def test_open_activity_reservation(login: WebDriver, request):
     # make an instance of login page class(s) and call method(s)
     reservation_page = Reservation(driver=login)
+    sleep(7)
+    # DEBUG
+    print("URL = " + login.current_url)
+    print("Page Chargée !")
     # Click on Book Link and redirect to reservation page
-    login.get("https://demotenant.playpro.fr/discover/reservation")
+    reservation_page.click_booking_link()
+    # wait for 7s
+    sleep(7)
     # Click on Activity (Expérience) : AVRArena Premium Test QA
-    reservation_page.activity_book_btn()
+    reservation_page.click_activity_book_btn()
     # Wait for some time to allow to load page
     sleep(10)
     # assertion
