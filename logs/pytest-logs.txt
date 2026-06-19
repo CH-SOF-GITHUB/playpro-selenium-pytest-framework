@@ -1,6 +1,6 @@
-2026-06-16 15:29:25 INFO Python Web Driver Started
-2026-06-16 15:29:27 INFO window size: {'width': 1296, 'height': 688}
-2026-06-16 15:29:27 INFO Pytest Session Start
-2026-06-16 15:29:35 INFO Login Successful
-2026-06-16 15:30:15 INFO test_booking_vr_arena_premium_test_qa OK
-2026-06-16 15:30:15 INFO Python Web Driver Teardown
+2026-06-19 17:55:22 INFO Python Web Driver Started
+2026-06-19 17:55:24 INFO window size: {'width': 1296, 'height': 688}
+2026-06-19 17:55:24 INFO Pytest Session Start
+2026-06-19 17:55:29 INFO Login Successful
+2026-06-19 17:56:04 INFO test_booking_vr_arena_premium_test_qa OK
+2026-06-19 17:56:04 INFO Python Web Driver Teardown

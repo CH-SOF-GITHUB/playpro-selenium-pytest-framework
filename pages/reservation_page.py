@@ -22,3 +22,8 @@ class Reservation(object):
         activity_book_btn = Wait.wait(self.driver).until(EC.visibility_of_element_located(Locator.activity_book_btn))
         self.driver.execute_script("arguments[0].scrollIntoView();", activity_book_btn)
         self.driver.execute_script("arguments[0].click();", activity_book_btn)
+
+    def check_success_reservation_msg(self):
+        success_reservation_msg = Wait.wait(self.driver).until(EC.visibility_of_element_located(Locator.success_reservation_msg))
+        assert success_reservation_msg.is_displayed()
+        return success_reservation_msg.text

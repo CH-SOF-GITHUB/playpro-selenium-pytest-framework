@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="515b342b-bf31-4595-ac8f-ea361fb781ca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/python-package.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/python-package.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locators/cart_locators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/panier_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locators/activities_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/vr_arena_premium_test_qa_locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locators/booking_locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/locators/booking_locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/pytest-logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pytest-logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/reservation_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/reservation_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/vr_arena_premium_test_qa_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vr_arena_premium_test_qa_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-reports/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-reports/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-reports/results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-reports/results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/play/pro/v3/Reservation/test_reservation_05.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/play/pro/v3/Reservation/test_reservation_05.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="54" />
+    <option name="cachedIndexableFilesCount" value="57" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,61 +47,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000203601420126" />
-      <entry key="S2" value="1.106663958342777" />
-      <entry key="S5" value="1.967265655969212" />
-      <entry key="S10" value="3.6007961072408117" />
-      <entry key="S30" value="8.96657504451952" />
-      <entry key="S60" value="13.909326738964161" />
-      <entry key="M2" value="18.52429241691166" />
-      <entry key="M5" value="23.23252233979556" />
-      <entry key="M10" value="30.66721343330997" />
-      <entry key="M15" value="44.98008181931713" />
-      <entry key="M30" value="105.65939500022765" />
-      <entry key="H1" value="212.5127338605131" />
-      <entry key="H2" value="351.90349454609446" />
-      <entry key="H4" value="537.6223256780138" />
-      <entry key="D1" value="1586.825263322946" />
-      <entry key="W1" value="2308.875566935439" />
+      <entry key="MS100" value="1.0000000038834875" />
+      <entry key="MS500" value="1.0207895162668856" />
+      <entry key="S2" value="1.3797179224536325" />
+      <entry key="S5" value="1.6788665943101992" />
+      <entry key="S10" value="1.8239336103778019" />
+      <entry key="S30" value="1.9374844509532134" />
+      <entry key="S60" value="1.968284602405328" />
+      <entry key="M2" value="2.0014359921763147" />
+      <entry key="M5" value="3.0565913747731854" />
+      <entry key="M10" value="9.544277450367726" />
+      <entry key="M15" value="21.283985164553698" />
+      <entry key="M30" value="71.75490145945719" />
+      <entry key="H1" value="185.43116184101402" />
+      <entry key="H2" value="371.60286280929995" />
+      <entry key="H4" value="620.1134637797836" />
+      <entry key="D1" value="1783.1414043910108" />
+      <entry key="W1" value="2583.5534170700516" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.7934565243456423E-240" />
-      <entry key="MS500" value="1.1239271715794952E-48" />
-      <entry key="S2" value="1.0296379533526053E-12" />
-      <entry key="S5" value="1.6035179175900606E-5" />
-      <entry key="S10" value="0.004004394982503676" />
-      <entry key="S30" value="0.15879822224880963" />
-      <entry key="S60" value="0.3984949478581388" />
-      <entry key="M2" value="0.6313087506521354" />
-      <entry key="M5" value="0.8855952359852708" />
-      <entry key="M10" value="2.2557673585549605" />
-      <entry key="M15" value="5.737223563057389" />
-      <entry key="M30" value="21.215263735097743" />
-      <entry key="H1" value="50.135295649460446" />
-      <entry key="H2" value="92.25691810887986" />
-      <entry key="H4" value="150.50910448048725" />
-      <entry key="D1" value="415.200506657129" />
-      <entry key="W1" value="575.261673198779" />
+      <entry key="MS100" value="0.11422893127867505" />
+      <entry key="MS500" value="0.6479704827166668" />
+      <entry key="S2" value="0.897199051281889" />
+      <entry key="S5" value="0.9575369069975262" />
+      <entry key="S10" value="0.9785381479521001" />
+      <entry key="S30" value="0.9927942552408515" />
+      <entry key="S60" value="0.9964968995329475" />
+      <entry key="M2" value="1.0194848780763615" />
+      <entry key="M5" value="1.7462919862839197" />
+      <entry key="M10" value="4.415339704931187" />
+      <entry key="M15" value="7.89959352075414" />
+      <entry key="M30" value="19.98379504370942" />
+      <entry key="H1" value="45.82243910657646" />
+      <entry key="H2" value="92.492149188844" />
+      <entry key="H4" value="161.6868396917638" />
+      <entry key="D1" value="456.06341794651587" />
+      <entry key="W1" value="636.279407318005" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9460576467255959" />
-      <entry key="MS500" value="0.9889868074241657" />
-      <entry key="S2" value="1.0903235390690422" />
-      <entry key="S5" value="1.9182374845978059" />
-      <entry key="S10" value="3.544968271917227" />
-      <entry key="S30" value="9.059602670986541" />
-      <entry key="S60" value="14.25042997551739" />
-      <entry key="M2" value="19.114946460944665" />
-      <entry key="M5" value="24.097002973903457" />
-      <entry key="M10" value="32.90515820650837" />
-      <entry key="M15" value="50.6939332652419" />
-      <entry key="M30" value="126.83792576408207" />
-      <entry key="H1" value="262.60781066992763" />
-      <entry key="H2" value="444.12622930920634" />
-      <entry key="H4" value="688.1048361762429" />
-      <entry key="D1" value="2002.0124524978257" />
-      <entry key="W1" value="2884.134502935274" />
+      <entry key="MS100" value="0.11423396480189472" />
+      <entry key="MS500" value="0.7360027823302733" />
+      <entry key="S2" value="1.6118549588169893" />
+      <entry key="S5" value="2.234766074139029" />
+      <entry key="S10" value="2.5663525562225824" />
+      <entry key="S30" value="2.8419728630317738" />
+      <entry key="S60" value="2.9192973304119816" />
+      <entry key="M2" value="2.997602272988345" />
+      <entry key="M5" value="4.790019885152379" />
+      <entry key="M10" value="13.946408445155342" />
+      <entry key="M15" value="29.168083632241274" />
+      <entry key="M30" value="91.71701936503106" />
+      <entry key="H1" value="231.2252309603483" />
+      <entry key="H2" value="464.0647663104226" />
+      <entry key="H4" value="781.7735408978399" />
+      <entry key="D1" value="2239.1906930577798" />
+      <entry key="W1" value="3219.829881118227" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -103,55 +113,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for actions.test_login.test_sample_login.executor": "Run",
-    "Python tests.Python tests for actions.test_panier_reservation.test_panier_reservation.executor": "Run",
-    "Python tests.Python tests for properties.test_cart_empty.test_go_to_cart.executor": "Run",
-    "Python tests.Python tests for properties.test_cart_empty.test_go_to_empty_cart.executor": "Run",
-    "Python tests.Python tests for properties.test_discover_reservation.test_reservation.executor": "Run",
-    "Python tests.Python tests for properties.test_reservation_activite.test_discover_activity.executor": "Run",
-    "Python tests.Python tests for properties.test_reservation_steps.test_reservation_steps.executor": "Run",
-    "Python tests.Python tests for test-discover_reservation.test_reservation.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.Login.test_login_01.test_login_tc_01.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_01.test_reservation.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_02.test_reservation.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_03.test_check_my_orders_in_profile.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_04.test_open_activity_reservation.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_05.test_booking_vr_arena_premium_test_qa.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.test_go_to_reservation_page.test_go_to_discover_reservation.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.test_login_parameterize.test_login_cross_browser.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.test_open_page.test_open_home_page.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.test_sample_login.test_login_01.executor": "Run",
-    "Python tests.Python tests for tests.play.pro.v3.test_sample_login.test_login_02.executor": "Run",
-    "Python tests.Python tests for tests.properties.test_cart_empty.test_go_to_empty_cart.executor": "Run",
-    "Python tests.Python tests for tests.properties.test_discover_activity.test_discover_activity.executor": "Run",
-    "Python tests.Python tests for tests.properties.test_discover_reservation.test_reservation.executor": "Run",
-    "Python tests.Python tests for tests.properties.test_reservation_activite.test_discover_activity.executor": "Run",
-    "Python tests.Python tests for tests.test_google.test_google_search.executor": "Run",
-    "Python tests.Python tests in test-discover_reservation.py.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/chaker/Desktop/automation/python-automation",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "settings.editor.splitter.proportion": "0.18685831",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for actions.test_login.test_sample_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for actions.test_panier_reservation.test_panier_reservation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for properties.test_cart_empty.test_go_to_cart.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for properties.test_cart_empty.test_go_to_empty_cart.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for properties.test_discover_reservation.test_reservation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for properties.test_reservation_activite.test_discover_activity.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for properties.test_reservation_steps.test_reservation_steps.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test-discover_reservation.test_reservation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.Login.test_login_01.test_login_tc_01.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_01.test_reservation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_02.test_reservation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_03.test_check_my_orders_in_profile.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_04.test_open_activity_reservation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.Reservation.test_reservation_05.test_booking_vr_arena_premium_test_qa.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.test_go_to_reservation_page.test_go_to_discover_reservation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.test_login_parameterize.test_login_cross_browser.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.test_open_page.test_open_home_page.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.test_sample_login.test_login_01.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.play.pro.v3.test_sample_login.test_login_02.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.properties.test_cart_empty.test_go_to_empty_cart.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.properties.test_discover_activity.test_discover_activity.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.properties.test_discover_reservation.test_reservation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.properties.test_reservation_activite.test_discover_activity.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.test_google.test_google_search.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test-discover_reservation.py.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chaker/Desktop/automation/python-automation&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.18685831&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\chaker\Desktop\automation\Mobile-Web-Testing\python-automation\documentation" />
@@ -288,7 +298,9 @@
       <workItem from="1781429355387" duration="20576000" />
       <workItem from="1781606687229" duration="4314000" />
       <workItem from="1781611044912" duration="557000" />
-      <workItem from="1781611628657" duration="8715000" />
+      <workItem from="1781611628657" duration="13433000" />
+      <workItem from="1781818644098" duration="4678000" />
+      <workItem from="1781887054970" duration="894000" />
     </task>
     <servers />
   </component>
@@ -307,6 +319,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/python_automation$.coverage" NAME=" Coverage Results" MODIFIED="1781620164689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_automation$.coverage" NAME=" Coverage Results" MODIFIED="1781887885283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

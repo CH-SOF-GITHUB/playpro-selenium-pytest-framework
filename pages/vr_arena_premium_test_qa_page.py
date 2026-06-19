@@ -1,6 +1,6 @@
 from utils.waits import Wait
 from selenium.webdriver.support import expected_conditions as EC
-from locators.activities_locators import Locator
+from locators.vr_arena_premium_test_qa_locators import Locator
 
 """
 Experience POM page: Vr Arena Premium Test QA
@@ -12,73 +12,64 @@ class EXPVrArenaPremiumTestQA(object):
         self.driver = driver
 
     """
-    Select of Number of Persons Methods
+    STEP 1: Click how is the Number of Persons
     """
 
     def click_nb_pers_selection(self):
-        nb_pers_selection = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.nb_pers_selection))
-        nb_pers_selection.click()
-
-    def click_one_person_option(self):
-        one_person_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.one_person_option))
-        one_person_option.click()
-
-    def click_two_person_option(self):
-        two_person_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.two_person_option))
-        two_person_option.click()
-
-    def click_three_person_option(self):
-        three_person_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.three_person_option))
-        three_person_option.click()
-
-    def click_four_person_option(self):
-        four_person_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.four_person_option))
-        four_person_option.click()
-
-    def click_five_person_option(self):
-        five_person_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.five_person_option))
-        five_person_option.click()
-
-    def click_six_person_option(self):
-        six_person_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.six_person_option))
-        six_person_option.click()
-
-    def click_seven_person_option(self):
-        seven_person_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.seven_person_option))
-        seven_person_option.click()
-
-    def click_eight_person_option(self):
-        eight_person_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.eight_person_option))
-        eight_person_option.click()
+        nb_pers_button = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.nb_pers_button))
+        nb_pers_button.click()
 
     """
-    Choices of Formule Methods
+    STEP 1: Choice of Formule Methods
     """
-
-    def click_duration_price_selection(self):
-        duration_price_selection = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.duration_price_selection))
-        duration_price_selection.click()
 
     def click_one_h_05_min_option(self):
         one_h_05_min_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.one_h_05_min_option))
-        one_h_05_min_option.click()
+        self.driver.execute_script("arguments[0].scrollIntoView();", one_h_05_min_option)
+        self.driver.execute_script("arguments[0].click();", one_h_05_min_option)
 
     def click_two_h_10_min_option(self):
         two_h_10_min_option = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.two_h_10_min_option))
         two_h_10_min_option.click()
 
     """
-    Continue Button Methods
+    STEP 1: Continue Button
     """
 
     def click_continue_btn_step_1(self):
         continue_btn_step_1 = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.continue_btn_step_1))
-        continue_btn_step_1.click()
+        self.driver.execute_script("arguments[0].scrollIntoView();", continue_btn_step_1)
+        self.driver.execute_script("arguments[0].click();", continue_btn_step_1)
 
     """
     STEP 2: <div><span>"VR Arena Premium Test QA"<div><span> Methods
     """
 
     def check_name_exp_step_2(self):
-        div_vr_arena_premium_test_qa = Wait.wait(self.driver).until(EC.visibility_of_element_located(Locator.div_vr_arena_premium_test_qa))
+        div_vr_arena_premium_test_qa = Wait.wait(self.driver).until(
+            EC.visibility_of_element_located(Locator.div_vr_arena_premium_test_qa))
         return div_vr_arena_premium_test_qa.text
+
+    """
+    STEP 2: Check Slots and Click on Confirm Btn
+    """
+
+    def click_confirm_btn_step_2(self):
+        my_reservation_confirm = Wait.wait(self.driver).until(
+            EC.visibility_of_element_located(Locator.my_reservation_confirm))
+        my_reservation_confirm.click()
+
+    def click_next_btn_step_2(self):
+        # self.driver.execute_script("window.scrollBy(0,700);")
+        next_button_step_2 = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.next_button_step_2))
+        self.driver.execute_script("arguments[0].scrollIntoView();", next_button_step_2)
+        self.driver.execute_script("arguments[0].click();", next_button_step_2)
+        # next_button_step_2.click()
+
+    def click_continue_no_option_btn(self):
+        # self.driver.execute_script("window.scrollBy(0,1000);")
+        continue_no_option_btn = Wait.wait(self.driver).until(
+            EC.element_to_be_clickable(Locator.continue_no_option_btn))
+        self.driver.execute_script("arguments[0].scrollIntoView();", continue_no_option_btn)
+        self.driver.execute_script("arguments[0].click();", continue_no_option_btn)
+        # continue_no_option_btn.click()
