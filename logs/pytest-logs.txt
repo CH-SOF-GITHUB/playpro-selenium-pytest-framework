@@ -1,6 +1,36 @@
-2026-06-19 17:55:22 INFO Python Web Driver Started
-2026-06-19 17:55:24 INFO window size: {'width': 1296, 'height': 688}
-2026-06-19 17:55:24 INFO Pytest Session Start
-2026-06-19 17:55:29 INFO Login Successful
-2026-06-19 17:56:04 INFO test_booking_vr_arena_premium_test_qa OK
-2026-06-19 17:56:04 INFO Python Web Driver Teardown
+2026-06-21 11:12:04 INFO Python Web Driver Started
+2026-06-21 11:12:05 INFO window size: {'width': 1296, 'height': 688}
+2026-06-21 11:12:05 INFO Pytest Session Start
+2026-06-21 11:12:11 INFO Login Successful
+2026-06-21 11:12:46 INFO slot: 
+13:00
+71.1€
+2026-06-21 11:12:46 INFO slot: 
+14:05
+71.1€
+2026-06-21 11:12:46 INFO slot: 
+15:10
+71.1€
+2026-06-21 11:12:46 INFO slot: 
+16:15
+71.1€
+2026-06-21 11:12:46 INFO slot: 
+17:20
+71.1€
+2026-06-21 11:12:46 INFO slot: 
+18:25
+71.1€
+2026-06-21 11:12:46 INFO slot: 
+19:30
+71.1€
+2026-06-21 11:12:46 INFO slot: 
+20:35
+71.1€
+2026-06-21 11:12:46 INFO slot: 
+21:40
+71.1€
+2026-06-21 11:12:47 INFO slot: 
+22:45
+71.1€
+2026-06-21 11:13:21 INFO test_booking_vr_arena_premium_test_qa OK
+2026-06-21 11:13:21 INFO Python Web Driver Teardown

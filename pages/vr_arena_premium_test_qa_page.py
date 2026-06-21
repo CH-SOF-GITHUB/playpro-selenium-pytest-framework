@@ -42,34 +42,25 @@ class EXPVrArenaPremiumTestQA(object):
         self.driver.execute_script("arguments[0].click();", continue_btn_step_1)
 
     """
-    STEP 2: <div><span>"VR Arena Premium Test QA"<div><span> Methods
+    STEP 2: Check Slots and Click on Confirm Btn For Example: Confirmer ma réservation- 71.1€ Soit 35.55€/pers
     """
 
-    def check_name_exp_step_2(self):
-        div_vr_arena_premium_test_qa = Wait.wait(self.driver).until(
-            EC.visibility_of_element_located(Locator.div_vr_arena_premium_test_qa))
-        return div_vr_arena_premium_test_qa.text
-
-    """
-    STEP 2: Check Slots and Click on Confirm Btn
-    """
-
-    def click_confirm_btn_step_2(self):
-        my_reservation_confirm = Wait.wait(self.driver).until(
-            EC.visibility_of_element_located(Locator.my_reservation_confirm))
+    def click_confirm_reservation_step_2(self):
+        my_reservation_confirm = Wait.wait(self.driver).until(EC.visibility_of_element_located(Locator.my_reservation_confirm))
         my_reservation_confirm.click()
 
-    def click_next_btn_step_2(self):
-        # self.driver.execute_script("window.scrollBy(0,700);")
-        next_button_step_2 = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.next_button_step_2))
-        self.driver.execute_script("arguments[0].scrollIntoView();", next_button_step_2)
-        self.driver.execute_script("arguments[0].click();", next_button_step_2)
-        # next_button_step_2.click()
-
+    """
+    STEP 3: Check Options
+    """
     def click_continue_no_option_btn(self):
-        # self.driver.execute_script("window.scrollBy(0,1000);")
-        continue_no_option_btn = Wait.wait(self.driver).until(
-            EC.element_to_be_clickable(Locator.continue_no_option_btn))
+        continue_no_option_btn = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.continue_no_option_btn))
         self.driver.execute_script("arguments[0].scrollIntoView();", continue_no_option_btn)
         self.driver.execute_script("arguments[0].click();", continue_no_option_btn)
-        # continue_no_option_btn.click()
+
+    """
+    STEP 4: Check all steps and click to finish the reservation
+    """
+    def click_finish_btn_step_4(self):
+        finish_btn_step_4 = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.finish_btn_step_4))
+        self.driver.execute_script("arguments[0].scrollIntoView();", finish_btn_step_4)
+        self.driver.execute_script("arguments[0].click();", finish_btn_step_4)

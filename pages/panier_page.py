@@ -13,4 +13,5 @@ class Panier(object):
 
     def click_on_payment_btn(self):
         payment_now_btn = Wait.wait(self.driver).until(EC.element_to_be_clickable(Locator.payment_btn))
-        payment_now_btn.click()
+        self.driver.execute_script("arguments[0].scrollIntoView();", payment_now_btn)
+        self.driver.execute_script("arguments[0].click();", payment_now_btn)
