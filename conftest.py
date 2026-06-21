@@ -1,6 +1,8 @@
 import os
 import shutil
 
+import allure
+import outcome
 from selenium import webdriver
 import pytest
 from selenium.common import TimeoutException
@@ -37,6 +39,7 @@ def driver(request) -> WebDriver | None:
         # make allure environment auto-detect
         os.makedirs("allure-results", exist_ok=True)
         shutil.copy("resources/environment.properties", "allure-results/environment.properties")
+
         # Close the driver if the test finished
         def driver_teardown():
             Logger.set_message("Python Web Driver Teardown")
@@ -70,8 +73,7 @@ def login(driver: WebDriver):
         # wait initialization
         wait = WebDriverWait(driver, 25)
         # close the cookie
-        cookie_btn = wait.until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div[3]/div/div/div[4]/div/button[1]")))
+        cookie_btn = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[3]/div/div/div[4]/div/button[1]")))
         cookie_btn.click()
         # locate email and password fields
         email_field = wait.until(EC.visibility_of_element_located((By.NAME, "email")))
@@ -86,3 +88,21 @@ def login(driver: WebDriver):
     except TimeoutException as e:
         Logger.set_message("Login failed: " + str(e))
         raise
+
+# Screenshots are stored inside allure-results/ as attachments inside test result files
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    result = outcome.get_result()
+
+    # only when test execution phase fails
+    if result.when == "call" and result.failed:
+
+        driver = item.funcargs.get("driver")
+
+        if driver:
+            allure.attach(
+                driver.get_screenshot_as_png(),
+                name="Failure Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )

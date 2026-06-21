@@ -195,6 +195,19 @@ Build Steps : Add Build Step → Execute Windows batch command
                  pytest -v --alluredir=allure-results tests/play/pro/v3/test_home_page.py
              }
    + Categories: Classification automatique des FAILURES: par example test failed, test broken ...
+   + Take screenshot if test is failed Model: add a hook
+     pytest engine
+             ↓
+     fixtures (driver, login)
+             ↓
+     test runs
+             ↓
+     hook runs (pytest_runtest_makereport)
+             ↓
+     hook accesses fixtures via item.funcargs
+             ↓
+     attach screenshot if failure
+   + https://github.com/marketplace/actions/generate-allure-report
 
 
 ##################################################################################################################
