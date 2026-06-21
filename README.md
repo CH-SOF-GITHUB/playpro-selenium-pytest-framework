@@ -82,30 +82,38 @@ Chaker Ben Said
 QA Automation Engineer
 
 # 8) How to  execute pytest tests in cmd command:
-  + pytest    
-  + pytest tests/play/pro/v3/test_open_page.py
-  + pytest tests/play/pro/v3/test_open_page.py -v --html=reports/report.html
-  + pytest tests/play/pro/v3/**.py -v --html=reports/report.html
-  + @pytest.mark.smoke      
-    def test_login():
-       pass
-    Run only the smoke tests :  pytest -m || pytest -m smoke tests/play/pro/v3/test_open_page.py
-  + pytest with the live logging flag: pytest -o log_cli=true --log-cli-level=INFO
-  + pytest -x           # stop after first failure
-  + pytest --maxfail=2  # stop after two failures
-  + pytest -x --pdb   # drop to PDB on first failure, then end test session
-  + pytest --pdb --maxfail=3  # drop to PDB for first three failures
+
++ pytest
++ pytest tests/play/pro/v3/test_open_page.py
++ pytest tests/play/pro/v3/test_open_page.py -v --html=reports/report.html
++ pytest tests/play/pro/v3/**.py -v --html=reports/report.html
++ @pytest.mark.smoke      
+  def test_login():
+  pass
+  Run only the smoke tests :  pytest -m || pytest -m smoke tests/play/pro/v3/test_open_page.py
++ pytest with the live logging flag: pytest -o log_cli=true --log-cli-level=INFO
++ pytest -x # stop after first failure
++ pytest --maxfail=2 # stop after two failures
++ pytest -x --pdb # drop to PDB on first failure, then end test session
++ pytest --pdb --maxfail=3 # drop to PDB for first three failures
 
 # 9) Parameterize Tests
-To implement parameterized cross-browser testing using Pytest and Selenium, you should use a parameterized Pytest fixture inside a conftest.py file. This structural approach isolates the browser setup and cleanup logic from your actual test cases, ensuring that every test automatically runs across all specified browsers.1. Project StructureCreate two files in your test directory:conftest.py: Houses the cross-browser setup fixture.test_suite.py: Contains your Selenium test cases.2. Configure the Shared Fixture (conftest.py)This file defines which browsers to test against. Pytest will spin up a fresh Selenium WebDriver instance for each browser specified in the params list.pythonimport pytest
+
+To implement parameterized cross-browser testing using Pytest and Selenium, you should use a parameterized Pytest
+fixture inside a conftest.py file. This structural approach isolates the browser setup and cleanup logic from your
+actual test cases, ensuring that every test automatically runs across all specified browsers.1. Project StructureCreate
+two files in your test directory:conftest.py: Houses the cross-browser setup fixture.test_suite.py: Contains your
+Selenium test cases.2. Configure the Shared Fixture (conftest.py)This file defines which browsers to test against.
+Pytest will spin up a fresh Selenium WebDriver instance for each browser specified in the params list.pythonimport
+pytest
 from selenium import webdriver
-    """
-      Define the browsers you want to test against
-    """
+"""
+Define the browsers you want to test against
+"""
 @pytest.fixture(params=["chrome", "firefox", "edge"], scope="function")
 def driver(request):
-    browser = request.param
-    
+browser = request.param
+
     # Initialize the appropriate WebDriver instance
     if browser == "chrome":
         options = webdriver.ChromeOptions()
@@ -132,32 +140,41 @@ def driver(request):
     # Teardown: Safely close the browser session after the test completes
     local_driver.quit()
 
-Utilisez le code avec précaution.3. Write Your Test (test_suite.py)Your test functions accept the driver fixture as an argument. You do not need to manually configure loops or browser conditions inside the test.pythonfrom selenium.webdriver.common.by import By
+Utilisez le code avec précaution.3. Write Your Test (test_suite.py)Your test functions accept the driver fixture as an
+argument. You do not need to manually configure loops or browser conditions inside the test.pythonfrom
+selenium.webdriver.common.by import By
 
 def test_google_search(driver):
-    # Navigate to the target website
-    driver.get("https://google.com")
-    
+# Navigate to the target website
+driver.get("https://google.com")
+
     # Validate the page title
     assert "Google" in driver.title
     
     # Example action: Locate search box
     search_box = driver.find_element(By.NAME, "q")
     assert search_box.is_displayed()
-Utilisez le code avec précaution.4. Execute the TestsOpen your terminal and execute pytest. Pytest automatically multiplies your tests by the number of browsers listed in your fixture.bash# Run tests sequentially (Will run 3 times: Chrome, Firefox, Edge)
+
+Utilisez le code avec précaution.4. Execute the TestsOpen your terminal and execute pytest. Pytest automatically
+multiplies your tests by the number of browsers listed in your fixture.bash# Run tests sequentially (Will run 3 times:
+Chrome, Firefox, Edge)
 pytest test_suite.py -v
-Utilisez le code avec précaution.Speeding Up with Parallel ExecutionRunning cross-browser tests sequentially can become incredibly slow. You can distribute the parameterized browser sessions simultaneously across multiple CPU cores by utilizing the pytest-xdist plugin.bash# Install the parallel execution plugin
+Utilisez le code avec précaution.Speeding Up with Parallel ExecutionRunning cross-browser tests sequentially can become
+incredibly slow. You can distribute the parameterized browser sessions simultaneously across multiple CPU cores by
+utilizing the pytest-xdist plugin.bash# Install the parallel execution plugin
 pip install pytest-xdist
 
 # 10) Run all browser instances concurrently
+
 pytest test_suite.py -n 3 -v
 
 # 11) Jenkins CI with Pytest
+
 Jenkins: http://localhost:8080/
-         http://localhost:8080/job/Run-Selenium-Tests/
+http://localhost:8080/job/Run-Selenium-Tests/
 
 Build Steps : Add Build Step → Execute Windows batch command
-     "C:\Users\chaker\AppData\Local\Programs\Python\Python312\python.exe" --version
+"C:\Users\chaker\AppData\Local\Programs\Python\Python312\python.exe" --version
 
      "C:\Users\chaker\AppData\Local\Programs\Python\Python312\python.exe" -m venv venv
 
@@ -168,7 +185,7 @@ Build Steps : Add Build Step → Execute Windows batch command
      python -m pytest actions\test_panier_reservation.py -v 
 
 Build Steps : Add Build Step → Execute Windows batch command
-     python -m venv venv
+python -m venv venv
 
      call venv\Scripts\activate
 
@@ -177,53 +194,148 @@ Build Steps : Add Build Step → Execute Windows batch command
      pytest -v --html=reports/report.html
 
 # 12) Generate beautiful HTML reports using Allure reports and your pytest tests
-   + pip install allure-pytest
-   + add in file pytest.ini:  --alluredir=allure-results
-                              --clean-alluredir
-   + allure-results/
-     allure generate allure-results -o allure-report OR  allure serve allure-results
-   + Writing tests and specify description, links and other metadata
-   + Execute test: pytest -v tests/play/pro/v3/test_home_page.py --alluredir=allure-results
-                   allure serve allure-results
-   + Optional (VERY RECOMMENDED FOR QA PORTFOLIO)
-      Add environment info: allure-results/environment.properties
-          Example:  Browser=Chrome
-                    Env=QA
-                    URL=https://demotenant.playpro.fr
-                    Tester=Chaker
-   + Trend:  1..3 | ForEach-Object {
-                 pytest -v --alluredir=allure-results tests/play/pro/v3/test_home_page.py
-             }
-   + Categories: Classification automatique des FAILURES: par example test failed, test broken ...
-   + Take screenshot if test is failed Model: add a hook
-     pytest engine
-             ↓
-     fixtures (driver, login)
-             ↓
-     test runs
-             ↓
-     hook runs (pytest_runtest_makereport)
-             ↓
-     hook accesses fixtures via item.funcargs
-             ↓
-     attach screenshot if failure
-   + https://github.com/marketplace/actions/generate-allure-report
 
++ pip install allure-pytest
++ add in file pytest.ini:  --alluredir=allure-results
+  --clean-alluredir
++ allure-results/
+  allure generate allure-results -o allure-report OR allure serve allure-results
++ Writing tests and specify description, links and other metadata
++ Execute test: pytest -v tests/play/pro/v3/test_home_page.py --alluredir=allure-results
+  allure serve allure-results
++ Optional (VERY RECOMMENDED FOR QA PORTFOLIO)
+  Add environment info: allure-results/environment.properties
+  Example:  Browser=Chrome
+  Env=QA
+  URL=https://demotenant.playpro.fr
+  Tester=Chaker
++ Trend:  1..3 | ForEach-Object {
+  pytest -v --alluredir=allure-results tests/play/pro/v3/test_home_page.py
+  }
++ Categories: Classification automatique des FAILURES: par example test failed, test broken ...
++ Take screenshot if test is failed Model: add a hook
+  pytest engine
+  ↓
+  fixtures (driver, login)
+  ↓
+  test runs
+  ↓
+  hook runs (pytest_runtest_makereport)
+  ↓
+  hook accesses fixtures via item.funcargs
+  ↓
+  attach screenshot if failure
++ Execute Pytest + Allure with Jenkins
+    1. OVERALL ARCHITECTURE
+       Jenkins Job
+       ↓
+       Checkout code (Git)
+       ↓
+       Install dependencies
+       ↓
+       Run pytest (generate allure-results)
+       ↓
+       Generate Allure report
+       ↓
+       Publish report in Jenkins UI
+    2. Jenkins plugins
+       Install:
+       Allure Jenkins Plugin
+       Git plugin
+       Pipeline plugin
+    3. JENKINS FREESTYLE JOB (simple setup)
+       Steps:
+       ✔ 1. Source Code Git repo URL
+       ✔ 2. Build step (Execute shell)
+       python -m pip install --upgrade pip
+       pip install -r requirements.txt
+       pip install allure-pytest
+       pytest -v --alluredir=allure-results
+       ✔ 3. Post-build Action
+       Select: 👉 “Allure Report”
+       Path: allure-results
+    4. JENKINS PIPELINE (BEST PRACTICE)
+       Create Jenkinsfile:
+       pipeline {
+       agent any
+
+    tools {
+        python 'Python3'
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Install dependencies') {
+            steps {
+                sh '''
+                    python -m pip install --upgrade pip
+                    pip install -r requirements.txt
+                    pip install allure-pytest
+                '''
+            }
+        }
+
+        stage('Run tests') {
+            steps {
+                sh '''
+                    pytest -v --alluredir=allure-results
+                '''
+            }
+        }
+
+        stage('Generate Allure Report') {
+            steps {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    results: [[path: 'allure-results']]
+                ])
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: '**/allure-results/**', fingerprint: true
+        }
+    } 
+   5. WHAT YOU GET IN JENKINS
+    After build:
+    ✔ Jenkins UI shows:
+       Test results
+       Pass/Fail trends
+       Duration
+       Flaky tests
+    ✔ Allure Report tab:
+       Dashboard
+       Graphs
+       Suites
+       Steps
+       Attachments (screenshots/logs)
++ https://github.com/marketplace/actions/generate-allure-report
 
 ##################################################################################################################
+
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
 name: Python package
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+push:
+branches: [ "main" ]
+pull_request:
+branches: [ "main" ]
 
 jobs:
-  build:
+build:
 
     runs-on: ubuntu-latest
     strategy:
