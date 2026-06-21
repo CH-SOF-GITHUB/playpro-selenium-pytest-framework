@@ -1,6 +1,4 @@
 from time import sleep
-
-import pytest
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from utils.waits import Wait

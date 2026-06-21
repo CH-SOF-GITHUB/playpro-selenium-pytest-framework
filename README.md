@@ -1,6 +1,6 @@
-# PlayPro UI Automation Framework
+# 1) PlayPro UI Automation Framework
 
-## Overview
+# 2) Overview
 
 This project is a UI Automation Testing Framework developed using:
 
@@ -18,7 +18,7 @@ The framework is designed to automate PlayPro web application testing and suppor
 * HTML reporting
 * Scalable Page Object Model architecture
 
-## Project Structure
+# 3) Project Structure
 
 ```text
 python-automation/
@@ -34,7 +34,7 @@ python-automation/
 └── README.md
 ```
 
-## Installation
+# 4) Installation
 
 ```bash
 python -m venv .venv
@@ -52,7 +52,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-## Run Tests
+# 5) Run Tests
 
 Execute all tests:
 
@@ -66,7 +66,7 @@ Generate HTML report:
 pytest -v --html=test-reports/report.html
 ```
 
-## Features
+# 6) Features
 
 * Selenium WebDriver
 * Pytest Fixtures
@@ -76,13 +76,12 @@ pytest -v --html=test-reports/report.html
 * Page Object Model (POM)
 * Easy CI/CD integration
 
-## Author
+# 7) Author
 
 Chaker Ben Said
 QA Automation Engineer
 
-"""
-How to  execute pytest tests in cmd command:
+# 8) How to  execute pytest tests in cmd command:
   + pytest    
   + pytest tests/play/pro/v3/test_open_page.py
   + pytest tests/play/pro/v3/test_open_page.py -v --html=reports/report.html
@@ -96,13 +95,13 @@ How to  execute pytest tests in cmd command:
   + pytest --maxfail=2  # stop after two failures
   + pytest -x --pdb   # drop to PDB on first failure, then end test session
   + pytest --pdb --maxfail=3  # drop to PDB for first three failures
-"""
 
-"""
+# 9) Parameterize Tests
 To implement parameterized cross-browser testing using Pytest and Selenium, you should use a parameterized Pytest fixture inside a conftest.py file. This structural approach isolates the browser setup and cleanup logic from your actual test cases, ensuring that every test automatically runs across all specified browsers.1. Project StructureCreate two files in your test directory:conftest.py: Houses the cross-browser setup fixture.test_suite.py: Contains your Selenium test cases.2. Configure the Shared Fixture (conftest.py)This file defines which browsers to test against. Pytest will spin up a fresh Selenium WebDriver instance for each browser specified in the params list.pythonimport pytest
 from selenium import webdriver
-
-# Define the browsers you want to test against
+    """
+      Define the browsers you want to test against
+    """
 @pytest.fixture(params=["chrome", "firefox", "edge"], scope="function")
 def driver(request):
     browser = request.param
@@ -132,6 +131,7 @@ def driver(request):
     
     # Teardown: Safely close the browser session after the test completes
     local_driver.quit()
+
 Utilisez le code avec précaution.3. Write Your Test (test_suite.py)Your test functions accept the driver fixture as an argument. You do not need to manually configure loops or browser conditions inside the test.pythonfrom selenium.webdriver.common.by import By
 
 def test_google_search(driver):
@@ -149,10 +149,10 @@ pytest test_suite.py -v
 Utilisez le code avec précaution.Speeding Up with Parallel ExecutionRunning cross-browser tests sequentially can become incredibly slow. You can distribute the parameterized browser sessions simultaneously across multiple CPU cores by utilizing the pytest-xdist plugin.bash# Install the parallel execution plugin
 pip install pytest-xdist
 
-# Run all browser instances concurrently
+# 10) Run all browser instances concurrently
 pytest test_suite.py -n 3 -v
-"""
-"""
+
+# 11) Jenkins CI with Pytest
 Jenkins: http://localhost:8080/
          http://localhost:8080/job/Run-Selenium-Tests/
 
@@ -175,4 +175,69 @@ Build Steps : Add Build Step → Execute Windows batch command
      pip install -r requirements.txt
 
      pytest -v --html=reports/report.html
-"""
+
+# 12) Generate beautiful HTML reports using Allure reports and your pytest tests
+   + pip install allure-pytest
+   + add in file pytest.ini:  --alluredir=allure-results
+                              --clean-alluredir
+   + allure-results/
+     allure generate allure-results -o allure-report OR  allure serve allure-results
+   + Writing tests and specify description, links and other metadata
+   + Execute test: pytest -v tests/play/pro/v3/test_home_page.py --alluredir=allure-results
+                   allure serve allure-results
+   + Optional (VERY RECOMMENDED FOR QA PORTFOLIO)
+      Add environment info: allure-results/environment.properties
+          Example:  Browser=Chrome
+                    Env=QA
+                    URL=https://demotenant.playpro.fr
+                    Tester=Chaker
+   + Trend:  1..3 | ForEach-Object {
+                 pytest -v --alluredir=allure-results tests/play/pro/v3/test_home_page.py
+             }
+   + Categories: Classification automatique des FAILURES: par example test failed, test broken ...
+
+
+##################################################################################################################
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python package
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [ "3.12.0" ]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Run Smoke Tests with pytest
+        env:
+          headless: "true"  # <--- C'EST ICI QU'IL FAUT LE METTRE !
+        run: |
+          pytest -v tests/play/pro/v3/test_home_page.py
+      - name: Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()       # always generate report even the test failed
+        with:
+          name: pytest-html-report
+          path: test-reports/report.html
+          retention-days: 7   # duration of reservation of report

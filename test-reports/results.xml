@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="80.013" timestamp="2026-06-21T11:12:04.099316+01:00" hostname="DESKTOP-17V9HJ5"><testcase classname="tests.play.pro.v3.Reservation.test_reservation_05" name="test_booking_vr_arena_premium_test_qa" file="tests\play\pro\v3\Reservation\test_reservation_05.py" line="19" time="79.893" /></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="7.233" timestamp="2026-06-21T16:01:39.308245+01:00" hostname="DESKTOP-17V9HJ5"><testcase classname="tests.play.pro.v3.test_home_page" name="test_open_home_page" file="tests\play\pro\v3\test_home_page.py" line="8" time="6.854"><failure message="AssertionError: Title play pro v3 page does not match&#10;assert 'DEMO TENANTT' == 'DEMO TENANT'&#10;  &#10;  #x1B[0m#x1B[91m- DEMO TENANT#x1B[39;49;00m#x1B[90m#x1B[39;49;00m&#10;  #x1B[92m+ DEMO TENANTT#x1B[39;49;00m#x1B[90m#x1B[39;49;00m&#10;  ?            +#x1B[90m#x1B[39;49;00m">driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="9d9fe3256b134de103e6ddd69347cf76")&gt;
+
+    @allure.title("Test home page")
+    @allure.description("This test attempts to access to home page and check this page")
+    @allure.tag("newUI", "Essentials", "Navigation")
+    @allure.label("Priority", "Medium")
+    @allure.label("tester", "Chaker Ben Said")
+    @allure.label("team", "QA")
+    @allure.label("browser", "chrome")
+    @allure.link("https://demotenant.playpro.fr/")
+    @allure.testcase("PLPRB-0001")
+    def test_open_home_page(driver: WebDriver):
+        # Open Play Pro V3 home page
+        driver.get("https://demotenant.playpro.fr/")
+        expected_title = "DEMO TENANTT"
+        actual_title = driver.title
+        Logger.set_message("Actual Title = " + actual_title)
+        # pytest assert
+&gt;       assert expected_title == actual_title, "Title play pro v3 page does not match"
+E       AssertionError: Title play pro v3 page does not match
+E       assert 'DEMO TENANTT' == 'DEMO TENANT'
+E         
+E         #x1B[0m#x1B[91m- DEMO TENANT#x1B[39;49;00m#x1B[90m#x1B[39;49;00m
+E         #x1B[92m+ DEMO TENANTT#x1B[39;49;00m#x1B[90m#x1B[39;49;00m
+E         ?            +#x1B[90m#x1B[39;49;00m
+
+tests\play\pro\v3\test_home_page.py:25: AssertionError</failure></testcase></testsuite></testsuites>

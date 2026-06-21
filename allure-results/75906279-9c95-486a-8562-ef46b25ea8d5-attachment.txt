@@ -1,0 +1,4 @@
+[32mINFO    [0m utils.Logger:Logger.py:11 Python Web Driver Started
+[32mINFO    [0m utils.Logger:Logger.py:11 window size: {'width': 1296, 'height': 688}
+[32mINFO    [0m utils.Logger:Logger.py:11 Actual Title = DEMO TENANT
+[32mINFO    [0m utils.Logger:Logger.py:11 Python Web Driver Teardown

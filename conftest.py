@@ -1,4 +1,6 @@
 import os
+import shutil
+
 from selenium import webdriver
 import pytest
 from selenium.common import TimeoutException
@@ -32,7 +34,9 @@ def driver(request) -> WebDriver | None:
         _driver = webdriver.Chrome(options=chrome_options)
 
         Logger.set_message("window size: " + str(_driver.get_window_size()))
-
+        # make allure environment auto-detect
+        os.makedirs("allure-results", exist_ok=True)
+        shutil.copy("resources/environment.properties", "allure-results/environment.properties")
         # Close the driver if the test finished
         def driver_teardown():
             Logger.set_message("Python Web Driver Teardown")
